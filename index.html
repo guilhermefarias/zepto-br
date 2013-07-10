@@ -59,11 +59,11 @@ github_url: https://github.com/madrobby/zepto
   <h1><img src=logo.png alt=Zepto.js></h1>
 
   <p>
-    <b>Zepto</b> is a minimalist <b>JavaScript library
-    for modern browsers</b> with a largely
-    <b>jQuery-compatible API</b>.
+    <b>Zepto</b> é uma <b>biblioteca JavaScript
+    minimalista para navegadores modernos</b> com uma API em grande parte
+    <b>compatível com jQuery</b>.
 
-    <em>If you use jQuery, you already know how to use Zepto.</em>
+    <em>Se você usa jQuery, você já sabe como usar Zepto.</em>
   </p>
 
   <div id=tour>
@@ -71,16 +71,15 @@ github_url: https://github.com/madrobby/zepto
   </div>
 
   <p>
-    While 100% jQuery coverage is not a design goal, the <b>APIs provided
-    match their jQuery counterparts</b>. The goal is to have a ~5-10k modular library
-    that <b>downloads and executes fast</b>, with a <b>familiar and versatile API</b>,
-    so you can <b>concentrate on getting stuff done</b>.
+    Enquanto 100% de cobertura jQuery não é um objetivo do projeto,
+    <b>as APIs fornecidas correspondem às suas contrapartes do jQuery</b>.
+    O objetivo é ter uma biblioteca modular ~ 5-10k que <b>faz o download e executa rápido</b>,
+    com uma <b>API familiar e versátil</b>, para que você possa se ​​<b>concentrar em obter o material feito</b>.
   </p>
 
   <p>
-    Zepto is open source software and is released under the
-    developer and business-friendly
-    <a href="{{ page.github_url }}/blob/master/MIT-LICENSE">MIT license</a>.
+    Zepto é um biblioteca de código aberto e foi lançada sob a
+    <a href="{{ page.github_url }}/blob/master/MIT-LICENSE">licença MIT</a>.
   </p>
 
   <p>
@@ -92,28 +91,28 @@ github_url: https://github.com/madrobby/zepto
   <h3 id=download>Download Zepto</h3>
 
   <p>
-    The default build includes the following modules:<br>
+    A build padrão inclui os seguintes módulos:
     <em>Core, Ajax, Event, Form, Effects, Polyfill, and Detect</em>.
   </p>
 
   <p class=important>
-    There are more modules; a list of all modules
-    is available in the <a href="{{ page.github_url }}#readme">README</a>.
+    Existem mais módulos, uma lista de todos os módulos
+    está disponível no <a href="{{ page.github_url }}#readme">README</a>.
   </p>
 
   <ul class=downloads>
     <li>
-      <a href="zepto.js" class="download">zepto.js v{{ page.version }} (for development)</a>
-      – <i>54.6k uncompressed, lots of comments</i>
+      <a href="zepto.js" class="download">zepto.js v{{ page.version }} (para desenvolvimento)</a>
+      – <i>54.6k descompactado e com muitos comentários</i>
     </li>
     <li>
-      <a href="zepto.min.js" class="download">zepto.min.js v{{ page.version }} (for production)</a>
-      – <i>9.7k when gzipped</i>
+      <a href="zepto.min.js" class="download">zepto.min.js v{{ page.version }} (para produção)</a>
+      – <i>9.7k quando está comprimida</i>
     </li>
   </ul>
   
   <p>
-    Or <b><a href="{{ page.github_url }}">grab the latest version on Github</a></b>.
+    Ou <b><a href="{{ page.github_url }}">pegue a última versão no Github</a></b>.
   </p>
   
   <ul class=downloads>
@@ -126,7 +125,7 @@ github_url: https://github.com/madrobby/zepto
   </ul>
 
   <p>
-    Include Zepto with a script tag near the end of your page:
+    Inclua o Zepto com uma tag script perto do fim da sua página:
   </p>
 
 {% highlight html %}
@@ -137,14 +136,15 @@ github_url: https://github.com/madrobby/zepto
 {% endhighlight %}
 
   <p class=compat>
-    Zepto will only set the <code>$</code> global to itself if it is 
-    not yet defined. There is no <code>Zepto.noConflict</code> method.
+    Zepto só irá definir o <code>$</code> global a si mesmo se
+    ainda não está definido. Não existe um método <code>Zepto.noConflict</code>.
   </p>
 
   <p>
-    <b>If you need to support Internet Explorer, you can fall back on jQuery.</b>
-    Note that conditional comments are no longer supported starting on IE 10,
-    so we recommend the following <code>document.write</code> approach:
+    <b>Se você precisa dá suporte para o Internet Explorer,
+    você pode utilizar o jQuery como fall back.</b>
+    Note que os comentários condicionais não são mais suportados a partir de IE 10,
+    por isso recomendamos a seguinte abordagem <code>document.write</code> a seguir:
   </p>
 
 {% highlight html %}
@@ -155,9 +155,9 @@ document.write('<script src=' +
 </script>
 {% endhighlight %}
 
-  <h3 id=platforms>Target platforms</h3>
+  <h3 id=platforms>Plataformas alvo</h3>
 
-  <h4>Desktop browsers</h4>
+  <h4>Navegadores Desktop</h4>
   <ul>
     <li>Safari 5+ (Mac, Win)</li>
     <li>Chrome 5+ (Win, Mac, Linux, Chrome OS)</li>
@@ -165,38 +165,39 @@ document.write('<script src=' +
     <li>Opera 10+ (Win, Mac, Linux)</li>
   </ul>
 
-  <h4>Mobile browsers</h4>  
+  <h4>Navegadores Mobile</h4>
   <ul>
     <li>iOS 4+ Safari</li>
-    <li>Chrome for Android</li>
-    <li>Chrome for iOS</li>
-    <li>Android 2.2+ Browser</li>
-    <li>webOS 1.4.5+ Browser</li>
-    <li>BlackBerry Tablet OS 1.0.7+ Browser</li>
+    <li>Chrome para Android</li>
+    <li>Chrome para iOS</li>
+    <li>Navegador do Android 2.2+</li>
+    <li>Navegador do webOS 1.4.5+</li>
+    <li>Navegador do BlackBerry Tablet OS 1.0.7+</li>
     <li>Amazon Silk 1.0+</li>
     <li>Firefox for Android</li>
-    <li>Firefox OS Browser</li>
-    <li>Practically any WebKit-based browsers/runtimes</li>
+    <li>Navegador do Firefox OS</li>
+    <li>Praticamente todos os navegadores baseados no WebKit</li>
   </ul>
 
   <p>
-    <em>Note that some optional features of Zepto specifically target
-    mobile browsers; as the original project goal was to specifically
-    provide a leaner alternative to jQuery for the mobile web.</em>
+    <em>Note que alguns recursos opcionais do Zepto visam
+    especificamente navegadores móveis, como o objetivo inicial do
+    projeto era fornecer uma alternativa mais enxuta especificamente
+    para jQuery para a web móvel.</em>
   </p>
 
   <p>
-    Zepto is a good choice for browser extensions (for Safari and Chrome) and
-    to develop HTML-based views within native app frameworks, such as
+    Zepto é uma boa opção para criar extensões do navegador (para o Safari e Chrome) e
+    para desenvolver views baseadas em HTML em frameworks para aplicativos nativos, como o
     <a href="http://phonegap.com/">PhoneGap</a>.
   <p>
 
   <p>
-    In short, Zepto is expected to work in every modern browser
-    and browser-like environment, except for Internet Explorer.
+    Em suma, Zepto é esperado que funcionem em todos os navegadores modernos
+    exceto para Internet Explorer.
   </p>
 
-  <h3>Manually building Zepto</h3>
+  <h3>Construindo manualmente o Zepto</h3>
 
   <p>
     <code>zepto.js</code> and <code>zepto.min.js</code> provided above can be
@@ -214,10 +215,10 @@ document.write('<script src=' +
     contributing patches.
   </p>
 
-  <h3>Creating plug-ins</h3>
+  <h3>Criando plug-ins</h3>
 
   <p>
-    Plugins can be written by adding methods as properties of
+    Plugins podem ser escritos adicionando métodos como propriedades de
     <a href="#$.fn"><code>$.fn</code></a>:
   </p>
 
@@ -234,46 +235,46 @@ document.write('<script src=' +
 {% endhighlight %}
 
   <p>
-    To get started with plug-in development, take a look at the
-    <a href="{{ page.github_url }}/blob/master/src/zepto.js">source of Zepto's core module</a>,
-    and be sure to read the
-    <a href="{{ page.github_url }}#code-style-guidelines">coding style guidelines</a>.
+    Para começar a desenvolver seu plug-in, dê uma olhada em
+    <a href="{{ page.github_url }}/blob/master/src/zepto.js">código fonte do modulo central do Zepto's</a>,
+    e não se esqueça de ler as
+    <a href="{{ page.github_url }}#code-style-guidelines">diretrizes de estilo de codificação</a>.
   </p>
 
   <section id=documentation>
 
     <hr>
-    <h2 id="core">Core methods</h2>
+    <h2 id="core">Métodos principais</h2>
     {% assign posts = site.categories.core %}
     {% include methods_full.html %}
     
     <hr>
-    <h2 id="detect">Detect methods</h2>
+    <h2 id="detect">Métodos de detecção</h2>
     {% assign posts = site.categories.detect %}
     {% include methods_full.html %}
 
     <hr>
-    <h2 id="event">Event handling</h2>
+    <h2 id="event">Manipulação de eventos</h2>
     {% assign posts = site.categories.event %}
     {% include methods_full.html %}
 
     <hr>
-    <h2 id="ajax">Ajax requests</h2>
+    <h2 id="ajax">Requisições Ajax</h2>
     {% assign posts = site.categories.ajax %}
     {% include methods_full.html %}
 
     <hr>
-    <h2 id="form">Form methods</h2>
+    <h2 id="form">Métodos de formulário</h2>
     {% assign posts = site.categories.form %}
     {% include methods_full.html %}
 
     <hr>
-    <h2 id="fx">Effects</h2>
+    <h2 id="fx">Efeitos</h2>
     {% assign posts = site.categories.fx %}
     {% include methods_full.html %}
 
     <hr>
-    <h2 id="touch">Touch</h2>
+    <h2 id="touch">Toques</h2>
     {% assign posts = site.categories.touch %}
     {% include methods_full.html %}
 
