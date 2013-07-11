@@ -5,8 +5,8 @@ signature: |
   $.camelCase(string) ⇒ string
 ---
 
-Turn a dasherized string into "camel case". Doesn't affect already camel-cased
-strings.
+Transforma uma string que possui hífen em "camel case".
+Não afeta as strings que já estão em camel case.
 
 {% highlight js %}
 $.camelCase('hello-there') //=> "helloThere"

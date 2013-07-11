@@ -5,8 +5,8 @@ signature: |
   $.isPlainObject(object) ⇒ boolean
 ---
 
-True if the object is a "plain" JavaScript object, which is only true for object
-literals and objects created with `new Object`.
+Retorna `true` se o objeto é um "simples" objeto JavaScript, o que só é verdade para o objeto
+literais e objetos criados com `new Object`.
 
 {% highlight js %}
 $.isPlainObject({})         // => true

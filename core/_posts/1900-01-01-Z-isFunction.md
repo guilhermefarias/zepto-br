@@ -4,4 +4,4 @@ signature: |
   $.isFunction(object) ⇒ boolean
 ---
 
-True if the object is a function.
+Retorna `true` se o objeto for uma função.

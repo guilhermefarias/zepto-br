@@ -5,4 +5,4 @@ signature: |
   $.parseJSON(string) ⇒ object
 ---
 
-Alias for the native `JSON.parse` method.
+Atalho para o método nativo `JSON.parse`.

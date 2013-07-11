@@ -5,6 +5,5 @@ signature: |
   $.isWindow(object) ⇒ boolean
 ---
 
-True if the object is a window object. This is useful for iframes where each one
-has its own window, and where these objects fail the regular `obj === window`
-check.
+Retorna `true` se o objeto é um objeto `window`. Isto é útil para iframe onde cada um
+tem sua própria janela, e onde esses objetos falham na checagem `obj === window`.
