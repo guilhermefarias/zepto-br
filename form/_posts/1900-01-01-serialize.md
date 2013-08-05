@@ -4,4 +4,4 @@ signature: |
   serialize() ⇒ string
 ---
 
-Serialize form values to an URL-encoded string for use in Ajax post requests.
+Serializa valores do formulário e transforma em uma URL codificada para ser usada em requisiçòes Ajax.
