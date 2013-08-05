@@ -1,15 +1,15 @@
 ---
-title: Touch events
+title: Eventos de toque
 ---
 
-The "touch" module adds the following events, which can be used with [on](#on) and [off](#off):
+O módulo de "toque", acrescenta os seguintes eventos, que podem ser usados ​​com [on](#on) e [off](#off):
 
-* `tap` — fires when the element is tapped.
-* `singleTap` and `doubleTap` — this pair of events can be used to detect both single and double taps on the same element (if you don't need double tap detection, use `tap` instead).
-* `longTap` — fires when an element is tapped and the finger is held down for more than 750ms.
-* `swipe`, `swipeLeft`, `swipeRight`, `swipeUp`, `swipeDown` — fires when an element is swiped (optionally in the given direction)
+* `tap` — dispara quando o elemento é tocado.
+* `singleTap` and `doubleTap` — este par de eventos pode ser utilizado para detectar dois toques simples ou apenas um toque no mesmo elemento (se você não precisa de detecção de toque duplo, use `tap`).
+* `longTap` — dispara quando um elemento é tocado e o dedo mantém pressionado por mais de 750ms.
+* `swipe`, `swipeLeft`, `swipeRight`, `swipeUp`, `swipeDown` — dispara quando o dedo é arrastado sobre o elemento (opcionalmente, na direcção dada)
 
-All these events are also available via shortcut methods on any Zepto collection.
+Todos estes eventos também estão disponíveis através de métodos de atalho em qualquer collection Zepto.
 
 {% highlight html %}
 <style>.delete { display: none; }</style>
@@ -20,13 +20,13 @@ All these events are also available via shortcut methods on any Zepto collection
 </ul>
 
 <script>
-// show delete buttons on swipe
+// Mostra o botão delete ao deslizar o dedo
 $('#items li').swipe(function(){
   $('.delete').hide()
   $('.delete', this).show()
 })
 
-// delete row on tapping delete button
+// Deleta a linha ao tocar no botão delete
 $('.delete').tap(function(){
   $(this).parent('li').remove()
 })
