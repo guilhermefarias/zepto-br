@@ -6,4 +6,4 @@ signature: |
 deprecated: 'off'
 ---
 
-Detach event handler added with [delegate](#delegate).
+Retira o manipulador de eventos adicionado com [delegate](#delegate).
