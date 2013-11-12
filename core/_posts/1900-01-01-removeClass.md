@@ -5,5 +5,5 @@ signature: |
   removeClass(function(index, oldClassName){ ... }) ⇒ self
 ---
 
-Remove the specified class name from all elements in the collection. When the
-class name isn't given, remove all class names. Multiple class names can be given in a space-separated string.
+Remove o nome da classe especificada de todos os elementos da collection. Quando o
+nome da classe não é dado, remove todos os nomes de classes. Vários nomes de classe podem ser dados em uma string separadas por espaço.

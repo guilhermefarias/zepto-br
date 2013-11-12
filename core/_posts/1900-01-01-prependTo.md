@@ -4,8 +4,8 @@ signature: |
   prependTo(target) ⇒ self
 ---
 
-Prepend elements of the current collection inside each of the target elements. This is
-like [prepend](#prepend), only with reversed operands.
+Adiciona o elemento da collection atual no início e dentro de cada um dos elementos de destino.
+É como o [prepend](#prepend), só que com operandos invertidos.
 
 {% highlight js %}
 $('<li>first list item</li>').prependTo('ul')

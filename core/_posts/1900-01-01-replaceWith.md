@@ -4,6 +4,6 @@ signature: |
   replaceWith(content) ⇒ self
 ---
 
-Replace each element in the collection--both its contents and the element
-itself--with the new content. Content can be of any type described in
+Substitui cada elemento da collection (tanto o seu conteúdo quanto o elemento
+em si) com o novo conteúdo. O conteúdo pode ser de qualquer tipo descrito em
 [before](#before).

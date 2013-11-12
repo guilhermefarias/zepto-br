@@ -5,5 +5,5 @@ signature: |
   scrollTop() ⇒ number
 ---
 
-Gets the value of how many pixels were scrolled so far on window or scrollable
-element on the page.
+Obtém o valor de quantos pixels foram rolados até agora na janela ou no elemento
+que possui a rolagem.
