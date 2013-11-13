@@ -4,8 +4,8 @@ signature: |
   insertBefore(target) ⇒ self
 ---
 
-Insert elements from the current collection before each of the target elements
-in the DOM. This is like [before](#before), but with reversed operands.
+Insere elementos da collection atual antes de cada um dos elementos-alvo
+no DOM. Isto é como [before](#before), mas com operandos invertidos.
 
 {% highlight js %}
 $('<p>See the following table:</p>').insertBefore('table')

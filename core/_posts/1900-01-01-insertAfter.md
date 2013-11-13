@@ -4,8 +4,8 @@ signature: |
   insertAfter(target) ⇒ self
 ---
 
-Insert elements from the current collection after the target element in the
-DOM. This is like [after](#after), but with reversed operands.
+Insere elementos da collection atual, após o elemento alvo no
+DOM. Isto é como [after](#after), mas com operandos invertidos.
 
 {% highlight js %}
 $('<p>Emphasis mine.</p>').insertAfter('blockquote')

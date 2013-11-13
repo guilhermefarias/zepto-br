@@ -5,5 +5,5 @@ signature: |
   offsetParent() ⇒ collection
 ---
 
-Find the first ancestor element that is _positioned_, meaning its CSS `position`
-value is "relative", "absolute" or "fixed".
+Encontra o primeiro elemento ancestral que é _posicionado_, ou seja, o valor da
+`position` no CSS é "relative", "absolute" or "fixed".
