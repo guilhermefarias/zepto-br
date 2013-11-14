@@ -5,7 +5,7 @@ signature: |
   toggleClass(function(index, oldClassNames){ ... }, [setting]) ⇒ self
 ---
 
-Toggle given class names (space-separated) in each element in the collection.
-The class name is removed if present on an element; otherwise it's added. If
-`setting` is present, this method behaves like [addClass](#addClass) if setting
-is truthy or [removeClass](#removeClass) otherwise.
+Alterna os nomes das classes indicadas (separadas por espaços) em cada elemento da collection.
+O nome da classe é removido se estiver presente em um elemento, caso contrário, ele é adicionado.
+Se `setting` está presente, este método se comporta como [addClass](#addClass) se definindo
+como verdadeiro ou [removeClass](#removeClass) se não for verdadeiro.

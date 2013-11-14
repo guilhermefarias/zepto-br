@@ -5,15 +5,15 @@ signature: |
   wrapInner(function(index){ ... }) ⇒ self [v1.0]
 ---
 
-Wrap the _contents_ of each element separately in a structure. Structure can be
-a single element or several nested elements, and can be passed in as a HTML string
-or DOM node, or as a function that is called for each element and returns one of
-the first two types.
+Envolve o _conteúdo_ de cada elemento separadamente numa estrutura. Estrutura pode ser
+um único elemento ou vários elementos aninhados, e pode ser passado como uma string
+HTML ou nó DOM, ou como uma função que é chamada para cada elemento e retorna um dos
+primeiros dois tipos.
 
 {% highlight js %}
-// wrap the contents of each navigation link in a span:
+// Envolve o conteúdo de cada link de navegação em um span:
 $('nav a').wrapInner('<span>')
 
-// wrap the contents of each list item in a paragraph and emphasis:
+// Elvolve o conteúdo de cada item da lista em um paragrafo com ênfase:
 $('ol li').wrapInner('<p><em /></p>')
 {% endhighlight %}
