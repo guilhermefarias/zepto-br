@@ -2,16 +2,17 @@
 title: $.ajaxSettings
 ---
 
-Object containing the default settings for Ajax requests. Most settings are
-described in [$.ajax](#$.ajax). The ones that are useful when set globally are:
+Objeto que contém a configuração padrão para as requisições Ajax. A maioria das
+configurações são descritas em [$.ajax](#$.ajax). Os que são úteis quando definido
+globalmente são:
 
-* `timeout` (default: `0`): set to a non-zero value to specify a default timeout
-  for Ajax requests in milliseconds
-* `global` (default: true): set to false to prevent firing Ajax events
-* `xhr` (default: XMLHttpRequest factory): set to a function that returns
-  instances of XMLHttpRequest (or a compatible object)
-* `accepts`: MIME types to request from the server for specific `dataType`
-  values:
+* `timeout` (default: `0`): define um valor diferente de zero para especificar um
+tempo limite padrão para requisições Ajax em milissegundos
+* `global` (default: true): define como falso para evitar disparar eventos do Ajax
+* `xhr` (default: XMLHttpRequest factory): define para a função que retorna
+instancias de XMLHttpRequests (ou um objeto compatível)
+* `accepts`: MIME types para as requisições do servidor em um valor
+`dataType` específico:
   - script: "text/javascript, application/javascript"
   - json:   "application/json"
   - xml:    "application/xml, text/xml"

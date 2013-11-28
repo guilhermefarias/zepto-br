@@ -5,6 +5,6 @@ signature: |
 deprecated: "$.ajax"
 ---
 
-Perform a JSONP request to fetch data from another domain.
+Realiza uma requisição JSONP para buscar dados de outro domínio.
 
-This method has no advantages over [$.ajax](#$.ajax) and should not be used.
+Este método não tem vantagens em relação ao [$.ajax](#$.ajax) e não deve ser utilizado.
