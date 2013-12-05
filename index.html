@@ -3,7 +3,7 @@ title: "Zepto.js: the aerogel-weight jQuery-compatible JavaScript library"
 layout: default
 description: >
   The aerogel-weight jQuery-compatible JavaScript library
-version: 1.0
+version: 1.1
 github_url: https://github.com/madrobby/zepto
 ---
 
@@ -17,7 +17,8 @@ github_url: https://github.com/madrobby/zepto
 
   <ul class=toc_section>
     <li><a href="#download">Download</a></li>
-    <li><a href="#platforms">Plataformas de destino</a></li>
+    <li><a href="#browsers">Navegadores suportados</a></li>
+    <li><a href="#modules">Módulos</a></li>
     <li><a href="#changelog">Change Log</a></li>
     <li><a href="#thanks">Agradecimentos</a></li>
   </ul>
@@ -73,8 +74,9 @@ github_url: https://github.com/madrobby/zepto
   <p>
     Enquanto 100% de cobertura jQuery não é um objetivo do projeto,
     <b>as APIs fornecidas correspondem às suas contrapartes do jQuery</b>.
-    O objetivo é ter uma biblioteca modular ~ 5-10k que <b>faz o download e executa rápido</b>,
-    com uma <b>API familiar e versátil</b>, para que você possa se ​​<b>concentrar em obter o material feito</b>.
+    O objetivo é ter uma biblioteca modular ~ 5-10k que <b>faz o download
+    e executa rápido</b>, com uma <b>API familiar e versátil</b>, para que
+    você possa se ​​<b>concentrar em obter o material feito</b>.
   </p>
 
   <p>
@@ -91,35 +93,37 @@ github_url: https://github.com/madrobby/zepto
   <h3 id=download>Download Zepto</h3>
 
   <p>
-    A build padrão inclui os seguintes módulos:
-    <em>Core, Ajax, Event, Form, Effects, Polyfill, and Detect</em>.
+    A forma padrão inclui os seguintes módulos:<br>
+    <em>Core, Ajax, Eventos, Formulário, IE</em>.
   </p>
 
   <p class=important>
-    Existem mais módulos, uma lista de todos os módulos
-    está disponível no <a href="{{ page.github_url }}#readme">README</a>.
+    A versão 1.0 do Zepto agrupava os módulos de efeitos, detecção e iOS3 na forma padrão.
+    <br>
+    Veja abaixo
+    <a href="#modules">módulos opcionais</a>.
   </p>
 
   <ul class=downloads>
     <li>
       <a href="zepto.js" class="download">zepto.js v{{ page.version }} (para desenvolvimento)</a>
-      – <i>54.6k descompactado e com muitos comentários</i>
+      – <i>53.2k descompactado e com muitos comentários</i>
     </li>
     <li>
       <a href="zepto.min.js" class="download">zepto.min.js v{{ page.version }} (para produção)</a>
-      – <i>9.7k quando está comprimida</i>
+      – <i>9.2k quando está comprimida</i>
     </li>
   </ul>
-  
+
   <p>
     Ou <b><a href="{{ page.github_url }}">pegue a última versão no Github</a></b>.
   </p>
-  
+
   <ul class=downloads>
     <li>
-      <iframe src="http://ghbtns.com/github-btn.html?user=madrobby&repo=zepto&type=watch&count=true"
+      <iframe src="http://ghbtns.com/github-btn.html?user=madrobby&amp;repo=zepto&amp;type=watch&amp;count=true"
       allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-      <iframe src="http://ghbtns.com/github-btn.html?user=madrobby&repo=zepto&type=fork&count=true"
+      <iframe src="http://ghbtns.com/github-btn.html?user=madrobby&amp;repo=zepto&amp;type=fork&amp;count=true"
       allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
     </li>
   </ul>
@@ -141,42 +145,35 @@ github_url: https://github.com/madrobby/zepto
   </p>
 
   <p>
-    <b>Se você precisa dá suporte para o Internet Explorer,
-    você pode utilizar o jQuery como fall back.</b>
-    Note que os comentários condicionais não são mais suportados a partir de IE 10,
-    por isso recomendamos a seguinte abordagem <code>document.write</code> a seguir:
+    <b>Se você precisa dá suporte para navegadores antigos,
+    como o Internet Explorer 9 ou anterior, você pode utilizar
+    o jQuery 1.x como fall back.</b>
   </p>
 
-{% highlight html %}
-<script>
-document.write('<script src=' +
-('__proto__' in {} ? 'zepto' : 'jquery') +
-'.js><\/script>')
-</script>
-{% endhighlight %}
+  <h3 id=browsers>Navegadores suportados</h3>
 
-  <h3 id=platforms>Plataformas alvo</h3>
-
-  <h4>Navegadores Desktop</h4>
+  <h4>Principal (100% suportado)</h4>
   <ul>
-    <li>Safari 5+ (Mac, Win)</li>
-    <li>Chrome 5+ (Win, Mac, Linux, Chrome OS)</li>
-    <li>Mozilla Firefox 4+ (Win, Mac, Linux)</li>
-    <li>Opera 10+ (Win, Mac, Linux)</li>
+    <li>Safari 6+ (Mac)</li>
+    <li>Chrome 30+ (Windows, Mac, Android, iOS, Linux, Chrome OS)</li>
+    <li>Firefox 24+ (Windows, Mac, Android, Linux, Firefox OS)</li>
+    <li>iOS 5+ Safari</li>
+    <li>Android 2.3+ Browser</li>
+    <li>Internet Explorer 10+ (Windows, Windows Phone)</li>
   </ul>
 
-  <h4>Navegadores Mobile</h4>
+  <h4>Alvos secundários (suportado totalmente ou em grande parte)</h4>
   <ul>
-    <li>iOS 4+ Safari</li>
-    <li>Chrome para Android</li>
-    <li>Chrome para iOS</li>
-    <li>Navegador do Android 2.2+</li>
-    <li>Navegador do webOS 1.4.5+</li>
-    <li>Navegador do BlackBerry Tablet OS 1.0.7+</li>
+    <li>iOS 3+ Safari</li>
+    <li>Chrome &lt;30</li>
+    <li>Firefox 4+</li>
+    <li>Safari &lt;6</li>
+    <li>Navegador do Android 2.2</li>
+    <li>Opera 10+</li>
+    <li>Navegador webOS 1.4.5+</li>
+    <li>Navegador do tablet BlackBerry OS 1.0.7+</li>
     <li>Amazon Silk 1.0+</li>
-    <li>Firefox for Android</li>
-    <li>Navegador do Firefox OS</li>
-    <li>Praticamente todos os navegadores baseados no WebKit</li>
+    <li>Outros navegadores/plataformmas baseadas em WebKit</li>
   </ul>
 
   <p>
@@ -187,14 +184,15 @@ document.write('<script src=' +
   </p>
 
   <p>
-    Zepto é uma boa opção para criar extensões do navegador (para o Safari e Chrome) e
-    para desenvolver views baseadas em HTML em frameworks para aplicativos nativos, como o
-    <a href="http://phonegap.com/">PhoneGap</a>.
+    Zepto é uma boa opção para criar extensões do navegador (para o Safari,
+    Chrome e Firefox) e para desenvolver views baseadas em HTML em frameworks
+    para aplicativos nativos, como o <a href="http://phonegap.com/">PhoneGap</a>.
   <p>
 
   <p>
-    Em suma, Zepto é esperado que funcionem em todos os navegadores modernos
-    exceto para Internet Explorer.
+    Em suma, Zepto é esperado que funcionem em todos os navegadores
+    modernos. Zepto não tem suporte para versões antigas do
+    Internet Explorer (&lt;10).
   </p>
 
   <h3>Construindo manualmente o Zepto</h3>
@@ -205,7 +203,7 @@ document.write('<script src=' +
     sistema de construção que vem com o código fonte do Zepto.
     Ele permite que você selecione os módulos, execute testes,
     use <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a> para
-    minificar sua build personalizada, e dá-lhe uma estimativa sobre a compressão
+    minificar sua forma personalizada, e dá-lhe uma estimativa sobre a compressão
     que é viável quando <code>zepto.min.js</code> é servido gzippado.
   </p>
 
@@ -214,6 +212,131 @@ document.write('<script src=' +
     para instruções sobre como personalizar o Zepto, incluindo a execução
     dos testes e contribuindo patches.
   </p>
+
+  <h3 id=modules>Zepto modules</h3>
+
+<table>
+<thead><tr>
+<th>module</th> <th>default</th> <th>description</th>
+</tr></thead>
+<tbody>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/zepto.js#files">zepto</a></th>
+    <td>✔</td>
+    <td>Core module; contains most methods</td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/event.js#files">event</a></th>
+    <td>✔</td>
+    <td>Event handling via <code>on()</code> &amp; <code>off()</code>
+</td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/ajax.js#files">ajax</a></th>
+    <td>✔</td>
+    <td>XMLHttpRequest and JSONP functionality</td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/form.js#files">form</a></th>
+    <td>✔</td>
+    <td>Serialize &amp; submit web forms</td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/ie.js#files">ie</a></th>
+    <td>✔</td>
+    <td>
+      Add support for Internet Explorer 10+ on desktop and Windows Phone 8.
+    </td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/detect.js#files">detect</a></th>
+    <td></td>
+    <td>Provides <code>$.os</code> and <code>$.browser</code> information</td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/fx.js#files">fx</a></th>
+    <td></td>
+    <td>The <code>animate()</code> method</td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/fx_methods.js#files">fx_methods</a></th>
+    <td></td>
+    <td>
+      Animated <code>show</code>, <code>hide</code>, <code>toggle</code>,
+      and <code>fade*()</code> methods.
+    </td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/assets.js#files">assets</a></th>
+    <td></td>
+    <td>
+      Experimental support for cleaning up iOS memory after removing
+      image elements from the DOM.
+    </td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/data.js#files">data</a></th>
+    <td></td>
+    <td>
+      A full-blown <code>data()</code> method, capable of storing arbitrary
+      objects in memory.
+    </td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/deferred.js#files">deferred</a></th>
+    <td></td>
+    <td>
+      Provides <code>$.Deferred</code> promises API.
+      Depends on the "callbacks" module.
+      <br>
+      When included, <a href="#$.ajax"><code>$.ajax()</code></a> supports a
+      promise interface for chaining callbacks.
+    </td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/callbacks.js#files">callbacks</a></th>
+    <td></td>
+    <td>
+      Provides <code>$.Callbacks</code> for use in "deferred" module.
+    </td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/selector.js#files">selector</a></th>
+    <td></td>
+    <td>
+      Experimental <a href="http://api.jquery.com/category/selectors/jquery-selector-extensions/">jQuery
+      CSS extensions</a> support for functionality such as <code>$('div:first')</code> and
+      <code>el.is(':visible')</code>.
+    </td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/touch.js#files">touch</a></th>
+    <td></td>
+    <td>
+      Fires tap– and swipe–related events on touch devices. This works with both
+      `touch` (iOS, Android) and `pointer` events (Windows Phone).
+    </td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/gesture.js#files">gesture</a></th>
+    <td></td>
+    <td>Fires pinch gesture events on touch devices</td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/stack.js#files">stack</a></th>
+    <td></td>
+    <td>Provides <code>andSelf</code> &amp; <code>end()</code> chaining methods</td>
+  </tr>
+<tr>
+<th><a href="https://github.com/madrobby/zepto/blob/master/src/ios3.js#files">ios3</a></th>
+    <td></td>
+    <td>
+      String.prototype.trim and Array.prototype.reduce methods
+      (if they are missing) for compatibility with iOS 3.x.
+    </td>
+  </tr>
+</tbody>
+</table>
 
   <h3>Criando plug-ins</h3>
 
@@ -247,7 +370,7 @@ document.write('<script src=' +
     <h2 id="core">Métodos principais</h2>
     {% assign posts = site.categories.core %}
     {% include methods_full.html %}
-    
+
     <hr>
     <h2 id="detect">Métodos de detecção</h2>
     {% assign posts = site.categories.detect %}
@@ -325,12 +448,14 @@ document.write('<script src=' +
 
 </div>
 
-<script src="zepto.min.js"></script>
-<script src="touch.js"></script>
+<script src="zepto-docs.min.js"></script>
 
 <script>
-  var reflowTimeout;
-  
+$(function(){
+  var reflowTimeout,
+    tour = $('#tour'), tourSlides = tour.children(),
+    tourSlide = 0, tourSlidesTotal = 5
+
   function injectScript(src) {
     var s = document.createElement('script')
     s.src = src; s.async = true
@@ -358,7 +483,7 @@ document.write('<script src=' +
 
   if ($.os.ios || /\bMac.+\bSafari\b/.test(navigator.userAgent))
     $(document.body).addClass('emoji-enabled')
-    
+
   // don't follow links when the sidebar is tap-enabled
   $('#sidebar').on('click', 'a', function(e){
     return !$('body').hasClass('navigating')
@@ -371,15 +496,15 @@ document.write('<script src=' +
     setTimeout(function(){
       // fixes sidebar becoming unscrollable in Safari 6
       reflowFixedPositions()
-    }, 10)    
+    }, 10)
     return false
   })
-  
+
   $(window).on('scroll', function(){
     if(reflowTimeout) clearTimeout(reflowTimeout)
     reflowTimeout = setTimeout(reflowFixedPositions, 200)
   })
-  
+
   function closeMenu(){
     if ($('body').hasClass('navigating')) {
       $('body').removeClass('navigating')
@@ -388,7 +513,7 @@ document.write('<script src=' +
       }, 350)
     }
   }
-  
+
   // show/hide menu on mobile
   $('#menu_icon').on('tap', function(){
     if ($('body').hasClass('navigating')) {
@@ -412,9 +537,6 @@ document.write('<script src=' +
     ('devicePixelRatio' in window && devicePixelRatio > 1) ?
     'intro2x.jpg' : 'intro.jpg'
 
-  var tour = $('#tour'), tourSlides = tour.children(),
-      tourSlide = 0, tourSlidesTotal = 5
-
   function advanceTourSlide(delta){
     tourSlide = (tourSlide + delta + tourSlidesTotal) % tourSlidesTotal
     var offset = tourSlide * tour.width()
@@ -429,18 +551,15 @@ document.write('<script src=' +
 
   if (/\.com$/.test(location.hostname))
     injectScript('http://platform.twitter.com/widgets.js')
+})
 </script>
 
 <script>
-  var _gauges = _gauges || [];
-  if (/\.com$/.test(location.hostname)) (function() {
-    var t   = document.createElement('script');
-    t.type  = 'text/javascript';
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '4f46b5c5f5a1f573c300004c');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37896092-14', 'zeptojs.com');
+  ga('send', 'pageview');
 </script>
