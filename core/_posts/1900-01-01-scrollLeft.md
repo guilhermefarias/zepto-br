@@ -6,5 +6,5 @@ signature: |
   scrollLeft(value) ⇒ self
 ---
 
-Gets or sets how many pixels were scrolled to the right so far on window or
-scrollable element on the page.
+Obtém ou define o valor de quantos pixels foram rolados para a direita até agora
+na janela ou no elemento que possui a rolagem.
